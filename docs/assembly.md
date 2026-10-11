@@ -1,6 +1,6 @@
-# CoreX 組み立てガイド（J4接続）
+# CoreX 組み立てガイド
 
-このページは、トラックボールをD125横のJ4に接続する基板向けです。**遠い側のJ3に接続する出荷品は、[写真付きの組み立てガイド](https://yuchamichami.github.io/CoreX-Proto-RMK/)を使ってください。** J3用の右ファームは書き込み済みなので、右を上書きする必要はありません。
+写真は、トラックボールを遠い側の **J3（D110横）** につなぐ出荷品です。右のファームは書き込み済みなので、そのまま動作確認できます。配布中のJ4用右ファームで上書きしないでください。
 
 純正Cornixの右側を、CoreXの交換基板とトラックボールに組み替えます。左側は分解せず、最後にファームウェアを書き換えます。
 
@@ -25,13 +25,18 @@
 配列を変更している場合は、作業前にVialの **File → Save current layout** で保存しておきます。
 
 1. 電源をOFFにし、USBケーブルを抜きます。
-2. 右側のキーキャップとスイッチを取り外します。
+2. 右側のキーキャップ、スイッチ、エンコーダのノブを取り外します。
 3. ドライバーを使い分けて、ケースのネジをすべて外します。**1か所はシールに隠れているので、シールを剥がして外してください。**
 4. 先にマイコンカバーを持ち上げ、その後トッププレートを持ち上げて外します。
 
 すっと持ち上がらない場合は、ネジが残っていないか確認してください。無理にこじ開けず、基板につながっているバッテリーの配線にも余裕を持たせます。
 
-<!-- 写真：ネジの全位置、シールの下のネジ、マイコンカバーを先に外す順序。 -->
+<p>
+  <a href="images/assembly/IMG_3784.jpg"><img src="images/assembly/IMG_3784.jpg" width="320" alt="エンコーダのノブ"></a>
+  <a href="images/assembly/IMG_3786.jpg"><img src="images/assembly/IMG_3786.jpg" width="320" alt="マイコンカバー側面のネジ穴"></a>
+</p>
+
+エンコーダのノブ ／ マイコンカバー側面のネジ穴
 
 ## 2. バッテリーを外し、純正基板を保管する
 
@@ -41,7 +46,18 @@
 
 純正基板は裸のまま置かないでください。他の物に当たると、小さな部品が外れたり傷ついたりすることがあります。
 
-<!-- 写真・動画：バッテリーコネクターをつかむ位置と、抜く方向。 -->
+<p>
+  <a href="images/assembly/IMG_3789_clean.jpg"><img src="images/assembly/IMG_3789_clean.jpg" width="320" alt="バッテリーの接続位置"></a>
+  <a href="images/assembly/IMG_3790_clean.jpg"><img src="images/assembly/IMG_3790_clean.jpg" width="320" alt="配線ではなく樹脂部分をつかむ"></a>
+</p>
+
+バッテリーの接続位置 ／ 配線ではなく樹脂部分をつかむ
+
+<p>
+  <a href="images/assembly/IMG_3791_clean.jpg"><img src="images/assembly/IMG_3791_clean.jpg" width="640" alt="上が純正基板、下がCoreXの交換基板"></a>
+</p>
+
+上が純正基板、下がCoreXの交換基板
 
 ## 3. フォームとトッププレートを仮固定する
 
@@ -49,30 +65,67 @@
 2. その上にトッププレートを重ね、スイッチの穴を合わせます。
 3. 四隅のスイッチを先に取り付けて、基板・フォーム・トッププレートを仮固定します。フォームがずれたり、折れ込んだりしていないか確認します。
 
-<!-- 写真：基板・フォーム・トッププレートの重なる順序と、仮固定するスイッチ。 -->
+<p>
+  <a href="images/assembly/IMG_3792_clean.jpg"><img src="images/assembly/IMG_3792_clean.jpg" width="320" alt="① 基板にフォームを重ねる"></a>
+  <a href="images/assembly/IMG_3793_clean.jpg"><img src="images/assembly/IMG_3793_clean.jpg" width="320" alt="② トッププレートを重ねる"></a>
+</p>
+
+① 基板にフォームを重ねる ／ ② トッププレートを重ねる
+
+<p>
+  <a href="images/assembly/IMG_3794_clean.jpg"><img src="images/assembly/IMG_3794_clean.jpg" width="640" alt="③ 四隅のスイッチで仮固定する"></a>
+</p>
+
+③ 四隅のスイッチで仮固定する
 
 ## 4. トラックボールのケーブルを接続する
 
 この作業中はUSBとバッテリーを外したままにします。FPCは、トラックボールケースから出ている薄い平たいケーブルです。
 
 1. FPCケーブルを、トッププレートの穴から基板の穴へ通し、基板の裏側へ出します。ケースをケーブルでぶら下げないよう、手で支えてください。
-2. **基板の「D125」と書かれたダイオードの隣にあるFPCコネクター**を確認します。
+2. **ボールから遠い側のJ3コネクター**（「D110」の横）を確認します。
 3. 茶色のストッパーを、ピンセットなどでそっと上げます。コネクター本体を持ち上げないようにしてください。
 4. コネクターのある基板面を上に向け、**FPCの金属端子が露出している面を下（基板側）に向けて**、まっすぐ奥まで差し込みます。
 5. ストッパーを下げてケーブルを固定します。斜めに入っていたり、途中までしか入っていない状態で閉じないでください。
 
 ストッパーは小さく壊れやすいため、閉じたままケーブルを押し込んだり、強く引き抜いたりしないでください。
 
-<!-- 写真・動画：ケーブルの通し方、D125横のコネクター、露出端子の向き、ストッパーの開閉。 -->
+<p>
+  <a href="images/assembly/IMG_3795_clean.jpg"><img src="images/assembly/IMG_3795_clean.jpg" width="320" alt="ケースから出ているFPCケーブル"></a>
+  <a href="images/assembly/IMG_3796_clean.jpg"><img src="images/assembly/IMG_3796_clean.jpg" width="320" alt="トラックボールケースを置く位置"></a>
+</p>
+
+ケースから出ているFPCケーブル ／ トラックボールケースを置く位置
+
+<p>
+  <a href="images/assembly/IMG_3797_clean.jpg"><img src="images/assembly/IMG_3797_clean.jpg" width="640" alt="穴から裏へ通し、遠い側のJ3へ向ける"></a>
+</p>
+
+穴から裏へ通し、遠い側のJ3へ向ける
+
+<p>
+  <a href="images/assembly/IMG_3798_clean.jpg"><img src="images/assembly/IMG_3798_clean.jpg" width="320" alt="① ストッパーを上げて差し込む"></a>
+  <a href="images/assembly/IMG_3799_clean.jpg"><img src="images/assembly/IMG_3799_clean.jpg" width="320" alt="② ストッパーを下げて固定する"></a>
+</p>
+
+① ストッパーを上げて差し込む ／ ② ストッパーを下げて固定する
+
+**J4接続の基板を使う場合：** 接続先は親指側のD125横です。右ファームもJ4用を使います。J3とJ4は、ケーブルの差し替えだけでは切り替えられません。
 
 ## 5. USBでトラックボールの動作を確認する
 
 トラックボールケースをネジで固定する前に確認します。基板は金属に触れない場所へ置き、バッテリーはまだ接続しません。
 
 1. 右基板をPCにUSB接続します。
-2. [ファームのダウンロード](../README.md#1-ファームをダウンロードする)から右用を取得し、[書き込み手順](flashing.md#ファームウェアを書き込む)に沿って書き込みます。**純正Cornix右用のファームではなく、CoreX右用を使ってください。**
-3. 再起動したらボールをケースに入れて回し、PCのポインターが動くことを確認します。
+2. 出荷品は右のファームを書き込み済みです。USB接続後、数秒待ちます。J4接続の基板でまだ書き込んでいない場合のみ、[J4用右ファームの書き込み手順](flashing.md)へ進んでください。
+3. 起動したらボールをケースに入れて回し、PCのポインターが動くことを確認します。
 4. 動作を確認できたら、USBケーブルを抜きます。
+
+<p>
+  <a href="images/assembly/IMG_3802_clean.jpg"><img src="images/assembly/IMG_3802_clean.jpg" width="640" alt="ケースを閉じる前に、USB接続でボールの動作を確認する"></a>
+</p>
+
+ケースを閉じる前に、USB接続でボールの動作を確認する
 
 動かない場合は、下の項目を確認してから先へ進みます。**ケーブルやセンサー基板を触る前に、USBを抜いてください。**
 
@@ -84,7 +137,18 @@
 
 センサー基板とコネクターはとても小さいので、ケーブルで引っ張らず、基板本体を支えて扱ってください。確認後にUSBをつなぎ直し、もう一度ボールを回します。
 
-<!-- 写真：センサー基板が奥まで入った状態と、センサー基板側のFPC接続方向。 -->
+<p>
+  <a href="images/assembly/extra_01_small_board_ribbon_clean.jpg"><img src="images/assembly/extra_01_small_board_ribbon_clean.jpg" width="320" alt="センサー基板の裏側"></a>
+  <a href="images/assembly/extra_02_transparent_module_clean.jpg"><img src="images/assembly/extra_02_transparent_module_clean.jpg" width="320" alt="レンズ側から見たFPCの向き"></a>
+</p>
+
+センサー基板の裏側 ／ レンズ側から見たFPCの向き
+
+<p>
+  <a href="images/assembly/IMG_3810.jpg"><img src="images/assembly/IMG_3810.jpg" width="320" alt="センサー側もストッパーを上げてから抜き差しする"></a>
+</p>
+
+センサー側もストッパーを上げてから抜き差しする
 
 ## 6. ケースを固定し、バッテリーを接続する
 
@@ -94,7 +158,14 @@
 4. USBをつなぎ、充電中に基板裏の赤い充電LEDが点灯することを確認します。満充電などで充電していないときは、点灯しない場合があります。
 5. 確認が済んだら、USBを抜き、電源をOFFにしてからケースへ戻します。
 
-<!-- 写真：固定ネジ2本の位置、バッテリーコネクターの向き、充電LED。 -->
+<p>
+  <a href="images/assembly/IMG_3800_clean.jpg"><img src="images/assembly/IMG_3800_clean.jpg" width="320" alt="固定に使うネジ2本"></a>
+  <a href="images/assembly/IMG_3801_clean.jpg"><img src="images/assembly/IMG_3801_clean.jpg" width="320" alt="基板の裏からケースを固定する"></a>
+</p>
+
+固定に使うネジ2本 ／ 基板の裏からケースを固定する
+
+写真のD125横のコネクターはJ4です。今回のJ3接続では使わず、空いたままにします。
 
 ## 7. アルミケースに戻す
 
@@ -107,11 +178,23 @@
 
 ネジは部品が動かなくなる程度に締め、強く締め込まないでください。アルミケースのネジ穴を傷めると、そのままでは固定できなくなります。
 
-<!-- 写真：スライドスイッチカバーのくぼみ、配線の収まり、浮きのない状態。 -->
+<p>
+  <a href="images/assembly/IMG_3803_clean.jpg"><img src="images/assembly/IMG_3803_clean.jpg" width="320" alt="ケース内側のスイッチカバーのくぼみ"></a>
+  <a href="images/assembly/IMG_3807_clean.jpg"><img src="images/assembly/IMG_3807_clean.jpg" width="320" alt="このスライドスイッチと位置を合わせる"></a>
+</p>
+
+ケース内側のスイッチカバーのくぼみ ／ このスライドスイッチと位置を合わせる
+
+<p>
+  <a href="images/assembly/IMG_3805_clean.jpg"><img src="images/assembly/IMG_3805_clean.jpg" width="320" alt="ケースとマイコンカバーを戻した状態"></a>
+  <a href="images/assembly/IMG_3808_clean.jpg"><img src="images/assembly/IMG_3808_clean.jpg" width="320" alt="親指側のLED周辺とトラックボールの収まり"></a>
+</p>
+
+ケースとマイコンカバーを戻した状態 ／ 親指側のLED周辺とトラックボールの収まり
 
 ## 8. 左側を書き換え、左右を接続する
 
-1. [純正Cornix左への書き込み手順](flashing.md#純正-cornix-左を初めて使う)に沿って、純正の設定を保存してから左用ファームを書き込みます。右は手順5で書き込み済みなので、書き直す必要はありません。
+1. [純正Cornix左への書き込み手順](flashing.md#純正-cornix-左を初めて使う)に沿って、純正の設定を保存してから左用ファームを書き込みます。出荷品の右は書き込み済みなので、書き直す必要はありません。
 2. [左右のペアリング](../README.md#3-左右をペアリングする)を進め、左右のキーで文字を入力できることを確認します。
 3. Bluetoothで使う場合は、続けて[PCとのペアリング](../README.md#4-pcとbluetoothでペアリングする)を進めます。
 4. [操作確認](../README.md#5-操作を確認する)に沿って、キー、ボール、クリック、スクロールを試します。

@@ -26,11 +26,3 @@
 センサーは待機中も電源を保ち、最初の動きで復帰します。通常の復帰では再初期化や移動データの読み捨てをしません。実装は[電源管理の説明](../BUILDING.md#スリープとpaw3222)、動作確認の範囲は[検証記録](validation.md)を参照してください。
 
 Bluetooth接続を維持して復帰する動作は[純正Cornixの説明](https://docs.channel.io/jezailfunderjp/ja/articles/Cornix-日本語マニュアル-c1160246)を参考にしています。待機までの5分はCoreXの設定値で、純正の公開値ではありません。
-
-## 写真付き組み立てページの更新
-
-公開ページは `docs/index.html`、原稿と写真の順番は `site/assembly.json` にあります。原稿を編集したら `python3 tools/build_assembly_site.py` でページを生成します。GitHub Pagesは `main` の `docs/` を公開します。
-
-写真エディターの保存データを取り込む場合は `python3 tools/build_assembly_site.py --arrangement /path/to/arrangement.json` を使います。新しい写真は先に `docs/images/assembly/` へ追加してください。取り込み対象は写真の順序・所属する工程・見出し・説明です。工程ごとの手順文は維持します。
-
-`python3 tools/build_assembly_site.py --check` で原稿と生成済みページの一致を確認できます。見た目と拡大操作は、リポジトリで `python3 -m http.server 8000 --directory docs` を起動し、ブラウザで確認します。

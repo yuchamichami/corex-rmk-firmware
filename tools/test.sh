@@ -2,7 +2,6 @@
 # Host tests and distribution checks; no connected hardware is accessed.
 set -eu
 COREX_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-python3 "$COREX_ROOT/tools/build_assembly_site.py" --check
 COREX_RUSTC=$(rustup which --toolchain 1.95.0 rustc)
 mkdir -p "$COREX_ROOT/build/tests"
 for COREX_REL_MODULE in right/src/paw_wire right/src/tuning_values right/src/paw3222_schedule shared/status_led_logic; do
