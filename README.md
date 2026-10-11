@@ -2,18 +2,18 @@
 
 ## 1. ファームをダウンロードする
 
-- **[右用ファーム — v0.10.1](https://github.com/yuchamichami/CoreX-Proto-RMK/releases/download/v0.10.1/CoreX-Right-v0.10.1.uf2)**：CoreX右・PAW3222用
+- **[右用ファーム — v0.10.1](https://github.com/yuchamichami/CoreX-Proto-RMK/releases/download/v0.10.1/CoreX-Right-v0.10.1.uf2)**：CoreX右・PAW3222をJ4に接続する場合
 - **[左用ファーム — v0.10.1](https://github.com/yuchamichami/CoreX-Proto-RMK/releases/download/v0.10.1/CoreX-Left-v0.10.1.uf2)**：純正Cornix左用
 
 右用はCoreX基板専用です。純正Cornix右には使えません。
 
-**これから基板を交換する場合は、[組み立てガイド](docs/assembly.md)から進めてください。** ケースを閉じる前に、右の書き込みとトラックボールの動作を確認します。
+**これから基板を交換する場合は、[写真付きの組み立てガイド](https://yuchamichami.github.io/CoreX-Proto-RMK/)から進めてください。** 写真と同じJ3接続の出荷品は右のファームを書き込み済みです。上の右用ファームで上書きせず、[左だけを書き換えて接続](https://yuchamichami.github.io/CoreX-Proto-RMK/#pairing)します。J4接続の基板は[従来の組み立て手順](docs/assembly.md)を使ってください。
 
 ## 2. 左右に書き込む
 
 書き換える前に、[Vial](https://get.vial.today/)の **File → Save current layout** で今の配列を保存します。CoreXを更新する場合は右を、純正Cornix左を初めて書き換える場合は純正左をUSB接続して保存してください。
 
-以下は、RESETを素早く2回押すとUSBドライブが出る基板向けの手順です。未書き込みのマイコンへの初回導入は含みません。
+以下は、トラックボールを右のJ4に接続し、RESETを素早く2回押すとUSBドライブが出る基板向けの手順です。未書き込みのマイコンへの初回導入は含みません。
 
 すでにv0.10.1が入っている側は、書き換え不要です。旧版からの移行は[更新手順](docs/flashing.md#corex-を更新する)を参照してください。
 
@@ -75,7 +75,7 @@
 
 PCにつなぐのはCoreX右で、左側にもこのリポジトリのファームが必要です。通常キーと数字・記号のFn配列は純正を基にしています。CoreX右と純正Cornix右のファームは互換性がありません。
 
-対象は右のJ4に接続したPAW3222です。トラックポイントとタッチパッドには対応していません。PCには右のUSBまたはBluetoothで接続します。純正の無線ドングルとの接続は未確認です。
+配布中の右用v0.10.1は、右のJ4に接続したPAW3222用です。J3接続の出荷品は、書き込み済みの右ファームをそのまま使います。トラックポイントとタッチパッドには対応していません。PCには右のUSBまたはBluetoothで接続します。純正の無線ドングルとの接続は未確認です。
 
 ## 困ったとき
 

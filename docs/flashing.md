@@ -1,5 +1,7 @@
 # ファームウェアの書き込み・更新
 
+**J3接続の出荷品は、右のファームを書き込み済みです。** このページのJ4用右ファームでは上書きせず、[左だけを書き換える手順](https://yuchamichami.github.io/CoreX-Proto-RMK/#pairing)へ進んでください。
+
 - [CoreXを更新する](#corex-を更新する)
 - [純正 Cornix 左を初めて使う](#純正-cornix-左を初めて使う)
 - [純正 Cornix 左へ戻す](#純正-cornix-左へ戻す)
@@ -8,14 +10,14 @@
 
 ## ファイル
 
-- **右：CoreX＋PAW3222、v0.10.1**
+- **右：CoreX＋PAW3222、J4接続用、v0.10.1**
   [CoreX-Right-v0.10.1.uf2](https://github.com/yuchamichami/CoreX-Proto-RMK/releases/download/v0.10.1/CoreX-Right-v0.10.1.uf2)
 - **左：純正 Cornix、v0.10.1**
   [CoreX-Left-v0.10.1.uf2](https://github.com/yuchamichami/CoreX-Proto-RMK/releases/download/v0.10.1/CoreX-Left-v0.10.1.uf2)
 - **CoreXの初期配列**
   [CoreX-Cornix-default.vil](../keymaps/CoreX-Cornix-default.vil)
 
-左右ともv0.10.1を使います。上のリンクから、それぞれのファイルを保存してください。
+J4接続では左右ともv0.10.1を使います。上のリンクから、それぞれのファイルを保存してください。
 
 **左右の UF2 は入れ替えないでください。純正 Cornix 右用のファームも、CoreX 右には使えません。**
 
@@ -42,6 +44,8 @@ CoreX 用と純正 Cornix 用でファイル名を分けてください。`.vil`
 再起動時に、OS が「ディスクが正しく取り出されませんでした」などと表示することがあります。表示の有無だけで判断せず、書き込み後のキー入力と Vial の認識を確認してください。
 
 ## CoreX を更新する
+
+以下はJ4接続の右基板を更新する手順です。J3接続の出荷品は、書き込み済みの右ファームをそのまま使ってください。
 
 すでにv0.10.1が入っている側は、書き換え不要です。別の版から移行する場合は、以下の手順でv0.10.1を書き込みます。保存済みのキー配列・感度・PCと左右の登録は維持します。
 更新前の版により、必要な操作が異なります。
@@ -78,6 +82,8 @@ Vialの **File → Load saved layout** で、使いたい配列を読み込み�
 更新前の版へ戻す場合も、この基板用に保存した右UF2を同じ手順で書き込みます。配列は、その版で保存した `.vil` から戻してください。古い版へ戻した場合のBluetooth登録や設定の互換性は、戻す版のリリース情報も確認してください。
 
 ## 純正 Cornix 左を初めて使う
+
+以下はJ4接続の右基板と組み合わせる手順です。J3接続の出荷品を使う場合は、[左だけを書き換えて接続する手順](https://yuchamichami.github.io/CoreX-Proto-RMK/#pairing)へ進んでください。
 
 1. 純正左の `.vil` を保存します。
 2. [書き込み手順](#ファームウェアを書き込む)に沿って、左に `CoreX-Left-v0.10.1.uf2` を書き込みます。

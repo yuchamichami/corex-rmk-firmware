@@ -66,3 +66,7 @@ Cornix is the original keyboard on which the left hardware and encoder presentat
 ## 初期キーマップの参照元
 
 `keymaps/reference/cornix-default-keymap.vil` は、JezailFunderが配布しているCornixの初期設定ファイルです。取得元・ハッシュ・CoreXで変更した箇所は[keymaps/README.md](keymaps/README.md)に記載しています。
+
+## Zen Maru Gothic
+
+The assembly website bundles WOFF conversions of Zen Maru Gothic Regular and Bold. Copyright 2021 The Zen Maru Gothic Project Authors. The fonts are distributed under the SIL Open Font License 1.1; see [the included license](docs/site/fonts/OFL.txt) and [upstream](https://github.com/googlefonts/zen-marugothic).
